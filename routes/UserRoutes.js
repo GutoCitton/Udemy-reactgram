@@ -3,12 +3,13 @@ const router = express.Router();
 
 // controller
 
-const { register, login, getCurrentUser, update, } = require('../controllers/userController');
+const { register, login, getCurrentUser, update } = require('../controllers/userController');
 
 // Middlewares
 const validate = require('../middlewares/handleValidation')
 const { userCreateValidation, loginValidation, userUpdateValidation } = require('../middlewares/userValidation')
 const authGuard = require('../middlewares/authGuard');
+const { imageUpload } = require('../middlewares/imageUpload');
 
 // Routes
 router.post('/register',userCreateValidation(), validate, register);

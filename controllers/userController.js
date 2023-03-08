@@ -83,8 +83,8 @@ const getCurrentUser = async (req, res) => {
 }
 
 // Update an user
-const update = async(req, res) => {
-  res.send('update')
+const update = async (req, res) => {
+  res.send('Update')
 }
 
 module.exports = {
