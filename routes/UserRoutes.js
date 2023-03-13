@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 
 // controller
-
 const { register, login, getCurrentUser, update } = require('../controllers/userController');
 
 // Middlewares
