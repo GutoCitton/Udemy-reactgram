@@ -6,3 +6,12 @@ body{
   background-color: #121212;
   color: #fafafa;
 }
+
+a {
+  color: #FAFAFA;
+  color: none;
+}
+
+.active {
+  font-weight: bold;
+}
