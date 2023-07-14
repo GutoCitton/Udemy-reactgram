@@ -19,7 +19,7 @@ const register = async (data) => {
 };
 
 const authService ={
-  register
+  register,
 }
 
 export default authService;
