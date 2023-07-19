@@ -25,6 +25,16 @@ const logout = () => {
   localStorage.removeItem('user');
 }
 
+// Sign in an user
+const login = async(data) => {
+ 
+  const config = requestConfig('POST', data);
+
+ 
+
+}
+
+
 const authService ={
   register,
   logout,
