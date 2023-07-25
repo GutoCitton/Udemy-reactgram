@@ -41,14 +41,13 @@ export const updateProfile = createAsyncThunk(
 
 // Get user details
 export const getUserDetails = createAsyncThunk(
-  'user/get',
-  async(id, thunkAPI) => {
-    
-    const data = await userService.getUserDetails(id)
+  "user/get",
+  async (id, thunkAPI) => {
+    const data = await userService.getUserDetails(id);
 
-    return data
+    return data;
   }
-)
+);
 
 export const userSlice = createSlice({
   name: "user",

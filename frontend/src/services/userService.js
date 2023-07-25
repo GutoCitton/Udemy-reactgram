@@ -36,7 +36,7 @@ const getUserDetails = async (id) => {
 
   try {
     const res = await fetch(api + "/users/" + id, config)
-      .then((res = res.json()))
+      .then((res) => res.json())
       .catch((err) => err);
 
     return res;
