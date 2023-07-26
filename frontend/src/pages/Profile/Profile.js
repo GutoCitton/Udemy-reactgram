@@ -33,6 +33,7 @@ const Profile = () => {
     error: errorPhoto,
     message: messagePhoto,
   } = useSelector((state) => state.photo);
+  
 
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
@@ -143,7 +144,7 @@ const Profile = () => {
                 )}
               </div>
             ))}
-            {photos.length === 0 && <p>Ainda não há fotos publicadas</p>}
+          {photos.length === 0 && <p>Ainda não há fotos publicadas</p>}
         </div>
       </div>
     </div>
