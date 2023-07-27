@@ -33,7 +33,6 @@ const Profile = () => {
     error: errorPhoto,
     message: messagePhoto,
   } = useSelector((state) => state.photo);
-  
 
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");

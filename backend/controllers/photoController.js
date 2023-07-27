@@ -186,7 +186,7 @@ const commentPhoto = async (req, res) => {
     userId: user._id,
   };
 
-  console.log(userComment)
+  console.log(userComment);
 
   photo.comments.push(userComment);
 
@@ -198,17 +198,14 @@ const commentPhoto = async (req, res) => {
   });
 };
 
-// Search photos by title 
-const searchPhotos = async(req, res) => {
+// Search photos by title
+const searchPhotos = async (req, res) => {
+  const { q } = req.query;
 
-  const {q} = req.query;
-
-  const photos = await Photo.find({title: new RegExp(q, 'i')}).exec();
+  const photos = await Photo.find({ title: new RegExp(q, "i") }).exec();
 
   res.status(200).json(photos);
-
-
-}
+};
 
 module.exports = {
   insertPhoto,
