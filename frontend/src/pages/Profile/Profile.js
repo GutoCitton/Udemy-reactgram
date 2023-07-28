@@ -25,6 +25,8 @@ const Profile = () => {
 
   const dispatch = useDispatch();
 
+  
+
   const { user, loading } = useSelector((state) => state.user);
   const { user: userAuth } = useSelector((state) => state.auth);
   const {
@@ -33,6 +35,8 @@ const Profile = () => {
     error: errorPhoto,
     message: messagePhoto,
   } = useSelector((state) => state.photo);
+
+  console.log(photos)
 
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
