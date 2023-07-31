@@ -139,7 +139,13 @@ const Profile = () => {
                   />
                 )}
                 {id === userAuth._id ? (
-                  <p>Actions</p>
+                  <div className="actions">
+                    <Link to={`/photos/&{photo._id}`}>
+                      <BsFillEyeFill />
+                    </Link>
+                    <BsPencilFill />
+                    <BsXLg />
+                  </div>
                 ) : (
                   <Link className="btn" to={`/photos/&{photo._id}`}>
                     Ver
