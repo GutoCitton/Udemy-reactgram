@@ -18,14 +18,13 @@ import {
   publishPhoto,
   resetMessage,
   getUserPhotos,
+  deletePhoto,
 } from "../../slices/photoSlice";
 
 const Profile = () => {
   const { id } = useParams();
 
   const dispatch = useDispatch();
-
-  
 
   const { user, loading } = useSelector((state) => state.user);
   const { user: userAuth } = useSelector((state) => state.auth);
@@ -36,7 +35,7 @@ const Profile = () => {
     message: messagePhoto,
   } = useSelector((state) => state.photo);
 
-  console.log(photos)
+  console.log(photos);
 
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
@@ -55,6 +54,12 @@ const Profile = () => {
     const image = e.target.files[0];
 
     setImage(image);
+  };
+
+  const resetComponentMessage = () => {
+    setTimeout(() => {
+      dispatch(resetMessage());
+    }, 2000);
   };
 
   const submitHandle = (e) => {
@@ -78,9 +83,14 @@ const Profile = () => {
 
     setTitle("");
 
-    setTimeout(() => {
-      dispatch(resetMessage());
-    }, 2000);
+    resetComponentMessage();
+  };
+
+  // Delete a photo
+  const handleDelete = (id) => {
+    dispatch(deletePhoto(id));
+
+    resetComponentMessage();
   };
 
   if (loading) {
@@ -144,7 +154,7 @@ const Profile = () => {
                       <BsFillEyeFill />
                     </Link>
                     <BsPencilFill />
-                    <BsXLg />
+                    <BsXLg onClick={() => handleDelete(photo._id)} />
                   </div>
                 ) : (
                   <Link className="btn" to={`/photos/&{photo._id}`}>
