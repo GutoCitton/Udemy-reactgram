@@ -53,7 +53,22 @@ const updatePhoto = async (data, id, token) => {
     const res = await fetch(api + "/photos/" + id, config)
       .then((res) => res.json())
       .catch((err) => err);
-      
+
+    return res;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+// Get a photo by id
+const getPhoto = async (id) => {
+  const config = requestConfig("GET");
+
+  try {
+    const res = await fetch(api + "/photos/" + id, config)
+      .then((res) => res.json())
+      .catch((err) => err);
+
       return res;
   } catch (error) {
     console.log(error);
@@ -65,6 +80,7 @@ const photoService = {
   getUserPhotos,
   deletePhoto,
   updatePhoto,
+  getPhoto,
 };
 
 export default photoService;
