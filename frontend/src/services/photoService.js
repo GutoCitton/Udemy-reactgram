@@ -64,12 +64,10 @@ const updatePhoto = async (data, id, token) => {
 const getPhoto = async (id, token) => {
   const config = requestConfig("GET", null, token);
 
-  console.log(id)
   try {
     const res = await fetch(api + "/photos/" + id, config)
       .then((res) => res.json())
       .catch((err) => err);
-
 
     return res;
   } catch (error) {
