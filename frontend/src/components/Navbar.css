@@ -2,9 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000;
+  background-color: var(--body_background);
   border-bottom: 1px solid #363636;
   padding: 0.1em 1em;
+  transition: 0.5s;
 }
 
 #search-form {
@@ -17,6 +18,10 @@
   position: absolute;
   top: 10px;
   left: 9px;
+}
+
+#nav a {
+  color: var(--a_color);
 }
 
 #search-form input{

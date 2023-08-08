@@ -3,13 +3,30 @@ body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #121212;
-  color: #fafafa;
+  background-color: var(--body_background);
+  color: var(--body_color);
+  transition: 0.5s;
+}
+
+body:root {
+  --body_background: #121212;
+  --body_color:#fafafa;
+  --link_color: #fafafa;
+  --a_color: #121212;
+}
+
+[data-theme="dark"] {
+  --body_background: #121212;
+  --body_color:#fafafa;
+  --link_color: cyan;
+  --a_color: #fafafa;
+  
 }
 
 a {
   color: #FAFAFA;
   color: none;
+  text-decoration: none;
 }
 
 .active {

@@ -47,6 +47,10 @@
   cursor: pointer;
 }
 
+.actions a {
+  color: var(--a_color);
+}
+
 .edit-photo {
   margin-bottom: 1em;
 }

@@ -18,6 +18,7 @@ import EditProfile from "./pages/EditProfile/EditProfile";
 import Profile from "./pages/Profile/Profile";
 import Photo from "./pages/Photo/Photo";
 import Search from "./pages/Search/Search";
+import DarkMode from "./components/DarkMode";
 
 function App() {
   const { auth, loading } = useAuth();
@@ -30,6 +31,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Navbar />
+        <DarkMode />
         <div className="container">
           <Routes>
             <Route
