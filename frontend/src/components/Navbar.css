@@ -21,7 +21,15 @@
 }
 
 #nav a {
+  display: flex;
   color: var(--a_color);
+  max-height: 50px;
+  align-items: center;
+}
+
+#nav a img {
+  width: 65px;
+  height: 50px;
 }
 
 #search-form input{
