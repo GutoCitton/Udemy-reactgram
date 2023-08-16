@@ -9,8 +9,6 @@ import {
   BsFillCameraFill,
 } from "react-icons/bs";
 
-import Logo from "../Images/logo.png";
-
 // Hooks
 import { useState } from "react";
 import { useAuth } from "../hooks/useAuth";
@@ -48,8 +46,7 @@ const Navbar = () => {
   return (
     <nav id="nav">
       <Link to="/">
-        <img src={Logo} alt="Logo" />
-        <h2>PCSD</h2>
+        <h2>ReactGram</h2>
       </Link>
       <form id="search-form" onSubmit={handleSearch}>
         <BsSearch />
@@ -98,5 +95,4 @@ const Navbar = () => {
     </nav>
   );
 };
-
 export default Navbar;
